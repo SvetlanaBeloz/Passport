@@ -5,11 +5,14 @@
 
 class ForeignPassport : public Passport
 {
+protected:
 	std::vector<Visa> visas;
 
 public:
 
-	ForeignPassport() : Passport() {}
+	ForeignPassport();
+	ForeignPassport(std::string name, std::string surname, std::string patronymic, std::string address, std::string birthdate, int number);
+
 
 
 	void AddVisa(Visa& vs);
